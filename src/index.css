@@ -1,0 +1,31 @@
+header {
+}
+
+#content {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+#nav-bar {
+	text-align: center;
+	margin-bottom: 3em;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 4em
+}
+.menu-item {
+    width: 100px;
+    height: 100px;
+    transform: rotate(-45deg);
+    background: yellow;
+}
+
+.diamond {
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+    background: red;
+}
