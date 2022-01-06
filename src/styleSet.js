@@ -1,13 +1,17 @@
-function menuRender(menuItem) {
-	const diamond = document.createElement("div");
-	diamond.classList.add("diamond");
-	const tmp = document.createElement("div");
-	tmp.classList.add("menu-item");
-	tmp.textContent = menuItem;
+function nestedElement(parentElement, childElement, parentClassName = "", childClassName = "", childTxtContent = "") {
+	const parentDiv = document.createElement(parentElement);
+	parentDiv.classList.add(`${parentClassName}`);
+	const childDiv = document.createElement(childElement);
+	childDiv.classList.add(`${childClassName}`);
+	childDiv.textContent = childTxtContent;
 
-	diamond.appendChild(tmp);
+	parentDiv.appendChild(childDiv);
 
-	return diamond;
+	return parentDiv;
 }
 
-export { menuRender };
+function newElement(){
+
+}
+
+export { nestedElement, newElement };

@@ -1,14 +1,20 @@
+:root {
+	--clr-primary-900: #995f4c;
+	--clr-primary-800: #c57b27;
+	--clr-primary-700: #e8ae02;
+	--clr-primary-600: #cc2522;
+}
 header {
-    align-items: center;
+	align-items: center;
 	display: flex;
 	flex-direction: column;
 }
 
 #content {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
-    gap: 4em
+	gap: 4em;
 }
 
 #nav-bar {
@@ -17,15 +23,16 @@ header {
 }
 
 .menu-item {
-    width: 100px;
-    height: 100px;
-    transform: rotate(-45deg);
-    background: yellow;
+	width: 100px;
+	height: 100px;
+	transform: rotate(-45deg);
+	background: var(--clr-primary-700);
 }
 
 .diamond {
-    width: 100px;
-    height: 100px;
-    transform: rotate(45deg);
-    background: red;
+	width: 100px;
+	height: 100px;
+	transform: rotate(45deg);
+	background: var(--clr-primary-600);
 }
+

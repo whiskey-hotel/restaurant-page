@@ -1,12 +1,12 @@
-import { menuRender } from "./styleSet";
+import { nestedElement } from "./styleSet";
 
-function component() {
-	const EddieDog = menuRender("Eddie Dog");
-	const ChilliDog = menuRender("Chilli Dog");
-	const CornDog = menuRender("Corn Dog");
-	const Bratwurst = menuRender("Bratwurst");
-	const VeganDog = menuRender("Vegan Dog");
+function menu() {
+	const EddieDog = nestedElement("div", "div", "diamond", "menu-item", "Eddie Dog");
+	const ChilliDog = nestedElement("div", "div", "diamond", "menu-item", "Chilli Dog");
+	const CornDog = nestedElement("div", "div", "diamond", "menu-item", "Corn Dog");
+	const Bratwurst = nestedElement("div", "div", "diamond", "menu-item", "Bratwurst");
+	const VeganDog = nestedElement("div", "div", "diamond", "menu-item", "Vegan Dog");
 
 	return { EddieDog, ChilliDog, CornDog, Bratwurst, VeganDog };
 }
-export { component };
+export { menu };

@@ -1,5 +1,6 @@
 import "./index.css";
-import { component } from "./menu";
+import { menu } from "./menu";
+import { newElement } from "./styleSet";
 
 //add title and nav bar here
 const header = document.createElement("header");
@@ -9,12 +10,14 @@ const nav = document.createElement("nav");
 nav.id = "nav-bar";
 
 const menuA = document.createElement("a");
-menuA.textContent = "Menu |";
+menuA.textContent = "Menu | ";
+menuA.href = "";
 const aboutA = document.createElement("a");
-aboutA.textContent = " About Us |";
+aboutA.textContent = "About Us | ";
+aboutA.href = "";
 const contactA = document.createElement("a");
-contactA.textContent = " Contact Us";
-
+contactA.textContent = "Contact Us";
+contactA.href = "";
 
 document.body.appendChild(header);
 header.appendChild(title);
@@ -27,15 +30,26 @@ const main = document.createElement("div");
 main.id = "content";
 document.body.appendChild(main);
 
-
-//call each module here
-//menu module
-const menuObject = component();
-for (const x in menuObject) {
-	main.appendChild(menuObject[x]);
+function removeAllChildNodes(parent) {
+	while (parent.firstChild) {
+		parent.removeChild(parent.firstChild);
+	}
 }
 
+function menuRender() {
+	removeAllChildNodes(main);
+	const menuObject = menu();
+	for (const x in menuObject) {
+		main.appendChild(menuObject[x]);
+	}
+}
+//call each module here
+//menu module
+menuA.addEventListener("click", () => {
+	menuRender();
+});
 //about us module
 //contact us module
 
-console.log("it works");
+//initial render
+menuRender();
