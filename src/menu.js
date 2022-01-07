@@ -18,11 +18,11 @@ function menu() {
 	const itemTitle4 = newElement("h3", "item-title", ...Array(1), "Bratwurst");
 	const itemTitle5 = newElement("h3", "item-title", ...Array(1), "Vegan Dog");
 
-	const itemPhoto1 = new Image(30, 30);
-	const itemPhoto2 = new Image(30, 30);
-	const itemPhoto3 = new Image(30, 30);
-	const itemPhoto4 = new Image(30, 30);
-	const itemPhoto5 = new Image(30, 30);
+	const itemPhoto1 = new Image();
+	const itemPhoto2 = new Image();
+	const itemPhoto3 = new Image();
+	const itemPhoto4 = new Image();
+	const itemPhoto5 = new Image();
 
 	itemPhoto1.src = EddieDogPhoto;
 	itemPhoto2.src = ChilliDogPhoto;
