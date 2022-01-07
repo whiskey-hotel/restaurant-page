@@ -10,8 +10,16 @@ function nestedElement(parentElement, childElement, parentClassName = "", childC
 	return parentDiv;
 }
 
-function newElement(){
+function newElement(element, className = "", ID = "", elementTextContent = "", href = "") {
+	const el = document.createElement(element);
+	className && el.classList.add(className);
+	el.id = ID;
+	el.textContent = elementTextContent;
+	if (element == "a") {
+		// el.href = href;
+	}
 
+	return el;
 }
 
 export { nestedElement, newElement };

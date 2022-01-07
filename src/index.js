@@ -1,23 +1,16 @@
 import "./index.css";
 import { menu } from "./menu";
+import { heyAboutUs } from "./aboutUs";
+import { heyContactUs } from "./contact";
 import { newElement } from "./styleSet";
 
-//add title and nav bar here
-const header = document.createElement("header");
-const title = document.createElement("h1");
-title.textContent = "Eddies Million Dollar Dogs";
-const nav = document.createElement("nav");
-nav.id = "nav-bar";
-
-const menuA = document.createElement("a");
-menuA.textContent = "Menu | ";
-menuA.href = "";
-const aboutA = document.createElement("a");
-aboutA.textContent = "About Us | ";
-aboutA.href = "";
-const contactA = document.createElement("a");
-contactA.textContent = "Contact Us";
-contactA.href = "";
+const header = newElement("header");
+const title = newElement("h1", ...Array(2), "Eddies Million Dollar Dogs");
+const nav = newElement("nav", ...Array(1), "nav-bar");
+const menuA = newElement("a", ...Array(2), "Menu | ");
+const aboutA = newElement("a", ...Array(2), "About Us | ");
+const contactA = newElement("a", ...Array(2), "Contact Us");
+const main = newElement("div", ...Array(1), "content");
 
 document.body.appendChild(header);
 header.appendChild(title);
@@ -25,9 +18,6 @@ header.appendChild(nav);
 nav.appendChild(menuA);
 nav.appendChild(aboutA);
 nav.appendChild(contactA);
-
-const main = document.createElement("div");
-main.id = "content";
 document.body.appendChild(main);
 
 function removeAllChildNodes(parent) {
@@ -43,13 +33,21 @@ function menuRender() {
 		main.appendChild(menuObject[x]);
 	}
 }
-//call each module here
+
 //menu module
 menuA.addEventListener("click", () => {
 	menuRender();
 });
 //about us module
+aboutA.addEventListener("click", function () {
+	removeAllChildNodes(main);
+	main.appendChild(heyAboutUs);
+});
 //contact us module
+contactA.addEventListener("click", function () {
+	removeAllChildNodes(main);
+	main.appendChild(heyContactUs);
+});
 
 //initial render
 menuRender();
