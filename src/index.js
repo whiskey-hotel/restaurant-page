@@ -2,14 +2,14 @@ import "./index.css";
 import { menu } from "./menu";
 import { heyAboutUs } from "./aboutUs";
 import { heyContactUs } from "./contact";
-import { newElement } from "./styleSet";
+import { newElement, nestedElement } from "./styleSet";
 
 const header = newElement("header");
 const title = newElement("h1", ...Array(2), "Eddies Million Dollar Dogs");
 const nav = newElement("nav", ...Array(1), "nav-bar");
-const menuA = newElement("a", ...Array(2), "Menu | ");
-const aboutA = newElement("a", ...Array(2), "About Us | ");
-const contactA = newElement("a", ...Array(2), "Contact Us");
+const menuA = nestedElement("div", "a", "nav-item-div", "nav-item", ...Array(1), "Menu");
+const aboutA = nestedElement("div", "a", "nav-item-div", "nav-item", ...Array(1), "About Us");
+const contactA = nestedElement("div", "a", "nav-item-div", "nav-item", ...Array(1), "Contact Us");
 const main = newElement("div", ...Array(1), "content");
 
 document.body.appendChild(header);

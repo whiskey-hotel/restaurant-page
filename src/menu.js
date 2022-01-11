@@ -6,6 +6,8 @@ import BratwurstPhoto from "./images/bratwurst.jpeg";
 import VeganDogPhoto from "./images/vegan-dog.jpeg";
 
 function menu() {
+	let foodDescription =
+		"Lorem Ipsum Tempor dolor consectetur incididunt qui ex. Et amet enim eiusmod adipisicing laboris adipisicing et consectetur deserunt laborum aliqua nostrud nisi laboris. Dolore ut pariatur sunt dolore ipsum officia Lorem exercitation aliqua culpa sint exercitation officia.";
 	const EddieDog = nestedElement("div", "div", "diamond", "menu-item", "eddie-dog");
 	const ChilliDog = nestedElement("div", "div", "diamond", "menu-item", "chilli-dog");
 	const CornDog = nestedElement("div", "div", "diamond", "menu-item", "corn-dog");
@@ -30,11 +32,11 @@ function menu() {
 	itemPhoto4.src = BratwurstPhoto;
 	itemPhoto5.src = VeganDogPhoto;
 
-	const itemDescription1 = newElement("p", "item-Description", ...Array(1), "Lorem ipsum...");
-	const itemDescription2 = newElement("p", "item-Description", ...Array(1), "Lorem ipsum...");
-	const itemDescription3 = newElement("p", "item-Description", ...Array(1), "Lorem ipsum...");
-	const itemDescription4 = newElement("p", "item-Description", ...Array(1), "Lorem ipsum...");
-	const itemDescription5 = newElement("p", "item-Description", ...Array(1), "Lorem ipsum...");
+	const itemDescription1 = newElement("p", "item-Description", ...Array(1), foodDescription);
+	const itemDescription2 = newElement("p", "item-Description", ...Array(1), foodDescription);
+	const itemDescription3 = newElement("p", "item-Description", ...Array(1), foodDescription);
+	const itemDescription4 = newElement("p", "item-Description", ...Array(1), foodDescription);
+	const itemDescription5 = newElement("p", "item-Description", ...Array(1), foodDescription);
 
 	EddieDog.childNodes[0].appendChild(itemTitle1);
 	ChilliDog.childNodes[0].appendChild(itemTitle2);
