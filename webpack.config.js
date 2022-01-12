@@ -9,7 +9,8 @@ entry: {
 devtool: 'inline-source-map',
 plugins: [
   new HtmlWebpackPlugin({
-    title: 'Restaurant-Page',
+    title: 'Eddies',
+    favicon:'./src/images/favicon_io/favicon.ico'
   }),
 ],
 output: {
