@@ -52,10 +52,12 @@ h1 {
 	background: var(--clr-primary-800);
 }
 
+.aboutUs-item,
 .menu-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	width: 24.25em;
 	height: 24.25em;
 	transform: rotate(-45deg);
@@ -71,6 +73,16 @@ img {
 	width: 14.875em;
 }
 
+.week-days,
 .item-Description {
 	text-align: center;
+}
+
+.week-days {
+	margin: 0;
+	font-size: 1.35em;
+}
+
+#address{
+	font-size: 1.40em;
 }

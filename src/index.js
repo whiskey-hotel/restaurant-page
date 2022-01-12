@@ -1,6 +1,6 @@
 import "./index.css";
 import { menu } from "./menu";
-import { heyAboutUs } from "./aboutUs";
+import { aboutUs } from "./aboutUs";
 import { heyContactUs } from "./contact";
 import { newElement, nestedElement } from "./styleSet";
 
@@ -26,22 +26,21 @@ function removeAllChildNodes(parent) {
 	}
 }
 
-function menuRender() {
+function moduleRender(obj) {
 	removeAllChildNodes(main);
-	const menuObject = menu();
-	for (const x in menuObject) {
-		main.appendChild(menuObject[x]);
+	const moduleObject = obj;
+	for (let x in moduleObject) {
+		main.appendChild(moduleObject[x]);
 	}
 }
 
 //menu module
-menuA.addEventListener("click", () => {
-	menuRender();
+menuA.addEventListener("click", function () {
+	moduleRender(menu());
 });
 //about us module
 aboutA.addEventListener("click", function () {
-	removeAllChildNodes(main);
-	main.appendChild(heyAboutUs);
+	moduleRender(aboutUs());
 });
 //contact us module
 contactA.addEventListener("click", function () {
@@ -50,4 +49,4 @@ contactA.addEventListener("click", function () {
 });
 
 //initial render
-menuRender();
+moduleRender(menu());
