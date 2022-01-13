@@ -52,6 +52,7 @@ h1 {
 	background: var(--clr-primary-800);
 }
 
+.contactUs-item,
 .aboutUs-item,
 .menu-item {
 	display: flex;
@@ -73,9 +74,17 @@ img {
 	width: 14.875em;
 }
 
+.phone,
+.email,
 .week-days,
 .item-Description {
 	text-align: center;
+}
+
+.position,
+.phone,
+.email {
+	margin: 0;
 }
 
 .week-days {
@@ -83,6 +92,6 @@ img {
 	font-size: 1.35em;
 }
 
-#address{
-	font-size: 1.40em;
+#address {
+	font-size: 1.4em;
 }

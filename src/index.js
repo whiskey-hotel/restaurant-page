@@ -1,7 +1,7 @@
 import "./index.css";
 import { menu } from "./menu";
 import { aboutUs } from "./aboutUs";
-import { heyContactUs } from "./contact";
+import { contactUs } from "./contact";
 import { pageRender } from "./render";
 
 //initial render
@@ -17,5 +17,5 @@ pageRender.aboutA.addEventListener("click", function () {
 });
 //contact us module
 pageRender.contactA.addEventListener("click", function () {
-	pageRender.moduleRender(heyContactUs)
+	pageRender.moduleRender(contactUs())
 });
